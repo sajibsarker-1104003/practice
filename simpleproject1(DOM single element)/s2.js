@@ -1,7 +1,14 @@
+/*let x = document.querySelector('ul');
+x.setAttribute('id', 'new id');
 
-let val = document.querySelectorAll('li:nth-child(odd)');
-val.forEach(function (item) {
-  item.style.background = 'red';
-  console.log(item);
-});
-console.log(val);
+console.log(x);*/
+/*let ulItem = document.createElement('li');
+let link = document.createElement('a');
+link.appendChild(document.createTextNode('instagram'));
+link.setAttribute('href', 'http://www.instagram.com');
+console.log(ulItem);
+console.log(link);*/
+let list = document.querySelector('ol');
+list.classList.add("test");
+
+console.log(list);
