@@ -13,7 +13,15 @@ function createPerson(person) {//change in callback function replacing promise//
   }, 2000);*/
   let prom = new Promise(function (resolve, reject) {
     persons.push(person);
-    resolve();//this promise will keep in this function//
+    //if there is a error then//
+    let error = true;
+    if (!error) {
+      resolve();//this promise will keep in this function//
+    }
+    else {
+      reject("ERROR");
+    }
+    //resolve();//this promise will keep in this function//
   });
   return prom;//return prom function//
 }
@@ -28,4 +36,8 @@ function getPerson() {
   }, 500)
 }
 createPerson({ fName: "pranto", lName: "sarker" })
-  .then(getPerson);//main function of promise//
+  .then(getPerson)//main function of promise//
+  //PRINTING THE ERROR//
+  .catch(function (err) {
+    console.log(err);
+  });
