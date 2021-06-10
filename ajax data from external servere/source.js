@@ -9,7 +9,7 @@ function loadJokes(e) {
   //console.log(number);
   let xhr = new XMLHttpRequest();
 
-  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);
+  xhr.open('GET', `http://api.icndb.com/jokes/random/${number}`, true);//number of jokes selected
 
   xhr.onprogress = function () {
     document.getElementById('output').innerHTML = "<h3>Loading......</h3>";
@@ -25,7 +25,7 @@ function loadJokes(e) {
         //console.log(item.joke);
         output += `<li>${item.joke}</li>`;
       });
-      output += "</ol>";
+      output += "</ol>";//jokes output will be shown there
 
       document.getElementById('output').innerHTML = output;
       //console.log(jokes);
